@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<title>Employee Search</title>
+</head>
+
+<body>
+	<h1>Employee Search</h1>
+	<form th:action="@{/search}" method="post">
+		<label >Employee ID:</label>
+		<input type="text" id="employeeId" name="employeeId">
+		<input type="submit" value="Search">
+	</form>
+
+	<div th:if="${employee != null}">
+		<h2>Employee Details</h2>
+		<p>ID: <span th:text="${employee.getEmployeeId()}"></span></p>
+		<p>Name: <span th:text="${employee.getFirstName()}"></span></p>
+		<p>Email: <span th:text="${employee.getEmail()}"></span></p>
+		<p>Salary: <span th:text="${employee.getSalary()}"></span></p>
+	</div>
+</body>
+
+</html>
