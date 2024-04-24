@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head> </head>
+
+  <body>
+    <h1>IBM FSD Demo App</h1>
+    <hr />
+    <h4>
+      IBM Java full stack demo application containing Java, Springboot, MongoDB,
+      HTML, JavaScript and CSS.
+    </h4>
+    <p>
+      This application allows you to perform employee management
+      functionalities.
+    </p>
+    <hr />
+    <p>Please create these functionalities</p>
+    <p>
+      Search employee by id, search all employees, add employee, update
+      employee, search employee by name, delete employee
+    </p>
+    <hr />
+    <p>Follow including - naming conventions, comments, code alignment etc</p>
+    <p>Use semantic elements from HTML5</p>
+
+    <button type="submit" id="getAll" onclick="findAllEmployees()">
+      Search all employees
+    </button>
+
+    <p id="allEmps"></p>
+    <br />
+    <br />
+    <form>
+      <input type="text" id="empId" placeholder="employee id"/>
+      <button type="button" onclick="findEmployeeById()">Search</button>
+    </form>
+
+    <p id="getEmpById"></p>
+
+    <br />
+    <br />
+
+    <form>
+        <input type="text" id="empName" placeholder="employee Name" required/>
+        <button type="button" onclick="findEmployeeByName()">Search</button>
+      </form>
+  
+      <p id="getEmpByName"></p>
+  
+      <br />
+      <br />
+
+      <form >
+		<label >Employee Name:</label>
+		<input type="text" id="employeeName" placeholder="Employee Name" required>
+        <label >Employee Salary:</label>
+		<input type="text" id="employeeSalary" placeholder="Employee Salary" required>
+        <label >Employee email:</label>
+		<input type="text" id="employeeMail" placeholder="Employee email" required>
+		<input type="submit" onclick="addEmployee()">
+	</form>
+<br><br><br>
+<form >
+    <label >Employee ID:</label>
+    <input type="text" id="upempId" placeholder="employee id" required/>
+    <label >Employee Name:</label>
+    <input type="text" id="upemployeeName" placeholder="Employee Name" >
+    <label >Employee Salary:</label>
+    <input type="text" id="upemployeeSalary" placeholder="Employee Salary" >
+    <label >Employee email:</label>
+    <input type="text" id="upemployeeMail" placeholder="Employee email" >
+    <button type="button" onclick="updateEmployee()">Update</button>
+</form>
+<br><br>
+    <form>
+        <input type="text" id="delEmpId" placeholder="employee ID" required/>
+        <button type="button" onclick="deleteEmployee()">Delete</button>
+      </form>
+
+
+
+
+
+    <script src="./script.js"></script>
+  </body>
+</html>
